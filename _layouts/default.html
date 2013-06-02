@@ -15,7 +15,31 @@
   <script src="js/vendor/custom.modernizr.js"></script>
 
 </head>
-<body class="{{ page.body-class }}">
+<body  id="top" class="{{ page.body-class }}">
+
+  <nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">Athens Affordable Internet Challenge</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="right">
+      <li class="divider"></li>
+      <li class="active"><a href="#the-problem">The Problem</a></li>
+      <li class="divider"></li>
+      <li><a href="#awareness">Awareness</a></li>
+      <li class="divider"></li>
+      <li><a href="#our-solution">Our Solution</a></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
 
   {{ content }}
 
@@ -28,7 +52,7 @@
   </script>
   
   <script src="js/foundation.min.js"></script>
-  <!--
+  
   
   <script src="js/foundation/foundation.js"></script>
   
@@ -60,7 +84,7 @@
   
   <script src="js/foundation/foundation.interchange.js"></script>
   
-  -->
+  
   
   <script>
     $(document).foundation();
