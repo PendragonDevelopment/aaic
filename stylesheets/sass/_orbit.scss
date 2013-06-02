@@ -1,0 +1,231 @@
+/* --------------------------------------------------
+Container
+-------------------------------------------------- */
+div.orbit-wrapper {
+  height: 1px;
+  position: relative;
+  width: 1px;
+}
+div.orbit {
+  height: 1px;
+  overflow: hidden;
+  position: relative;
+  width: 1px;
+}
+div.orbit.with-bullets {
+  margin-bottom: 40px;
+}
+div.orbit .orbit-slide {
+  left: 0;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+}
+div.orbit a.orbit-slide {
+  border: none;
+  display: none;
+  line-height: 0;
+}
+div.orbit div.orbit-slide {
+  height: 100%;
+  width: 100%;
+}
+/* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+
+/* --------------------------------------------------
+Timer
+-------------------------------------------------- */
+div.orbit-wrapper div.timer {
+  cursor: pointer;
+  height: 40px;
+  @include opacity(0.6);
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  z-index: 31;
+}
+div.orbit-wrapper span.rotator {
+  background: url(../images/orbit/rotator-black.png) no-repeat;
+  display: block;
+  height: 40px;
+  left: -20px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  z-index: 3;
+}
+div.orbit-wrapper span.mask {
+  display: block;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  z-index: 2;
+}
+div.orbit-wrapper span.rotator.move {
+  left: 0
+}
+div.orbit-wrapper span.mask.move {
+  background: url(../images/orbit/timer-black.png) repeat 0 0;
+  left: 0;
+  width: 40px;
+}
+div.orbit-wrapper span.pause {
+  background: url(../images/orbit/pause-black.png) no-repeat;
+  display: block;
+  height: 40px;
+  left: 0;
+  @include opacity(0.0);
+  position: absolute;
+  top: 0;
+  width: 40px;
+  z-index: 4;
+}
+div.orbit-wrapper span.pause.active {
+  background: url(../images/orbit/pause-black.png) no-repeat 0 -40px
+}
+div.orbit-wrapper div.timer:hover span.pause, div.orbit-wrapper span.pause.active {
+  @include opacity(1.0);
+}
+
+/* --------------------------------------------------
+Captions
+-------------------------------------------------- */
+.orbit-caption {
+  display: none;
+  font-family: "HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif;
+}
+.orbit-wrapper .orbit-caption {
+  background: $black;
+  background: rgba($black, 0.6);
+  bottom: 0;
+  color: $white;
+  font-size: 13px;
+  padding: 7px 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 30;
+}
+
+/* --------------------------------------------------
+Directional Nav
+-------------------------------------------------- */
+div.orbit-wrapper div.slider-nav {
+  display: block
+}
+div.orbit-wrapper div.slider-nav span {
+  cursor: pointer;
+  height: 100px;
+  margin-top: -50px;
+  position: absolute;
+  text-indent: -9999px;
+  top: 50%;
+  width: 78px;
+  z-index: 30;
+}
+div.orbit-wrapper div.slider-nav span.right {
+  background: url(../images/orbit/right-arrow.png);
+  right: 0;
+}
+div.orbit-wrapper div.slider-nav span.left {
+  background: url(../images/orbit/left-arrow.png);
+  left: 0;
+}
+
+/* --------------------------------------------------
+Bullet Nav
+-------------------------------------------------- */
+ul.orbit-bullets {
+  bottom: -40px;
+  left: 50%;
+  list-style: none;
+  margin-left: -50px;
+  padding: 0;
+  position: absolute;
+  z-index: 30;
+}
+ul.orbit-bullets li {
+  background: url(../images/orbit/bullets.jpg) no-repeat 4px 0;
+  cursor: pointer;
+  color: $gray40;
+  float: left;
+  height: 12px;
+  margin-left: 5px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 13px;
+}
+ul.orbit-bullets li.active {
+  background-position: -8px 0;
+  color: $gray85;
+}
+ul.orbit-bullets li.has-thumb {
+  background: none;
+  height: 75px;
+  width: 100px;
+}
+ul.orbit-bullets li.active.has-thumb {
+  background-position: 0 0;
+  border-top: 2px solid $black;
+}
+
+/* --------------------------------------------------
+Fluid Layout
+-------------------------------------------------- */
+div.orbit img.fluid-placeholder {
+  display: block;
+  position: static;
+  visibility: hidden;
+  width: 100%;
+}
+div.orbit,
+div.orbit-wrapper {
+  width: 100% !important;
+}
+ul.orbit-bullets {
+  bottom: -50px;
+  left: 50%;
+  list-style: none;
+  margin-left: -50px;
+  padding: 0;
+  position: absolute;
+  z-index: 30;
+}
+ul.orbit-bullets li {
+  background: url(../images/orbit/bullets.jpg) no-repeat 4px 0;
+  color: $gray40;
+  cursor: pointer;
+  float: left;
+  height: 12px;
+  margin-left: 5px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 13px;
+}
+ul.orbit-bullets li.has-thumb {
+  background: none;
+  height: 75px;
+  width: 100px;
+}
+ul.orbit-bullets li.active {
+  background-position: -8px 0;
+  color: $gray85;
+}
+ul.orbit-bullets li.active.has-thumb {
+  background-position: 0 0;
+  border-top: 2px solid $black;
+}
+/* Correct timer in IE */
+.timer {
+  display: none !important;
+}
+div.caption {
+  background:transparent;
+  zoom: 1;
+}
